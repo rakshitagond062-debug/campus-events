@@ -1,0 +1,565 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   LOGIN PAGE
+===================================== */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+.login-box {
+    width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+.logo {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.login-box h1 {
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4f46e5;
+
+    box-shadow: 0 0 5px
+        rgba(79, 70, 229, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #3730a3;
+}
+
+.small-text {
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.small-text a {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    background: #4f46e5;
+    color: white;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a {
+    color: white;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #ddd;
+}
+
+
+/* =====================================
+   EVENTS PAGE
+===================================== */
+
+.event-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #777;
+}
+
+
+/* Event Grid */
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* Event Card */
+
+.event-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Date */
+
+.event-date {
+    width: 65px;
+    height: 65px;
+
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.event-date span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-date small {
+    font-size: 12px;
+}
+
+.event-card h2 {
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-info {
+    margin: 10px 0;
+    color: #555;
+}
+
+
+/* Register Button */
+
+.register-btn {
+    display: block;
+
+    text-align: center;
+
+    background: #4f46e5;
+    color: white;
+
+    padding: 12px;
+
+    margin-top: 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    background: #3730a3;
+}
+
+
+/* =====================================
+   REGISTRATION PAGE
+===================================== */
+
+.registration-container {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+.registration-box {
+    width: 550px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.registration-box h1 {
+    color: #4f46e5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.registration-box .subtitle {
+    text-align: center;
+}
+
+
+/* =====================================
+   SUCCESS PAGE
+===================================== */
+
+.success-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f5f3ff
+    );
+
+    padding: 30px;
+}
+
+.success-box {
+    width: 650px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    background: #22c55e;
+    color: white;
+
+    border-radius: 50%;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.success-box h1 {
+    color: #16a34a;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   EMAIL / MESSAGE CARD
+===================================== */
+
+.message-card {
+    text-align: left;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-top: 25px;
+
+    background: #fafafa;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    background: #f1f5f9;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #4f46e5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+.message-header p {
+    color: #777;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.message-body {
+    padding: 25px;
+
+    line-height: 1.7;
+}
+
+.message-body h2 {
+    color: #4f46e5;
+    margin-bottom: 15px;
+}
+
+.message-body p {
+    margin-bottom: 12px;
+}
+
+.reminder {
+    background: #eef2ff;
+
+    border-left: 5px solid #4f46e5;
+
+    padding: 15px;
+
+    margin: 20px 0;
+}
+
+.reminder p {
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   BACK BUTTON
+===================================== */
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #3730a3;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+
+    .login-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .event-container {
+        width: 92%;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .registration-box {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .success-box {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .message-body {
+        padding: 18px;
+    }
+}
